@@ -40,7 +40,7 @@ const loadImg = function (entries, observer) {
   if (!entry.isIntersecting) return;
 
   // replace image source with original image.
-  entry.target.src = entry.target.src.replace("lazy", "orig");
+  entry.target.src = entry.target.dataset.src;
 
   // updation of sorce of image happens in background by JS. once done emits a "load" event
 
